@@ -73,3 +73,7 @@ Template.clientItem.events({
         sChatModal.open('removeAppModal', {clientAppId: this._id});
     }
 });
+
+Template.registerHelper('maxClientApps', function() {
+    return Meteor.settings.public.maxClientApps;
+});
